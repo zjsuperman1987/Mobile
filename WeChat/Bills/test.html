@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="font-size: 100px;">
+<head>
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 引入 底层css 样式 -->
+    <link type="text/css" rel="stylesheet" href="/Mobile/WeChat/_css/common.css" />
+    <link type="text/css" rel="stylesheet" href="/Mobile/WeChat/_css/layer.css" />
+    <!-- 引入 底层Js 库-->
+    <script type="text/javascript" language="javascript" src="/Mobile/WeChat/_js/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/Mobile/WeChat/_js/layer.js"></script>
+    <script type="text/javascript" language="javascript" src="/Mobile/WeChat/_js/common.js"></script>
+    <title>光之际软件有限公司</title>
+</head>
+
+<body>
+	<div data-user-id="001">
+		<div>
+			<button>Click me</button>
+		</div>
+	</div><br />
+	<div data-user-id="002">
+		<div>
+			<button>Click me</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('button').on("click",function(event){
+			var userId = event.target.parentNode.parentNode.dataset.userId;
+			alert(typeof userId)
+			window.location.href = "./test1.html?userId=" + userId
+	    })
+	</script>
+</body> 
+</html>
+
+<style>
+
+</style>
